@@ -1,0 +1,54 @@
+$fireColor: rgb(0, 255, 123);
+$fireColorT: rgba(255,80,0,0);
+$dur: 3s;
+$blur: 0.02em;
+$fireRad: 3em;
+$parts: 50;
+$partSize: 5em;
+
+.fire {
+  position: absolute;
+  bottom: 0%;
+  left: 60%;
+  transform: scale(1.5) translate(-50%, 0);
+  width: 4em;
+  height: 0;
+  margin: 3em auto 0 auto;
+  filter: blur(0.02em);
+  -webkit-filter: blur(0.02em);
+  font-size: 24px;
+}
+
+.particle {
+  position: absolute;
+  bottom: 0;
+  width: $partSize;
+  height: $partSize;
+  opacity: 0;
+  animation: rise $dur ease-in infinite;
+  background-image: radial-gradient($fireColor 20%,$fireColorT 70%);
+  border-radius: 50%;
+  mix-blend-mode: screen;
+
+  // spread particles out in time and x-position to get desired effect
+  @for $p from 1 through $parts {
+    &:nth-of-type(#{$p}) {
+      animation-delay: $dur * random();
+      left: calc((100% - #{$partSize}) * #{($p - 1)/$parts});
+    }
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10em) scale(0);
+  }
+}
