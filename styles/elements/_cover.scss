@@ -2,16 +2,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  @include equal-size;
   background: url(../public/portada.webp) no-repeat;
   background-size: cover;
   background-position: center center;
 
   &:after {
     content: '';
-    width: 100%;
-    height: 100%;
+    @include equal-size;
     display: block;
     background: linear-gradient(0deg, rgb(0 0 0), rgb(59 87 56 / 67%));
   }

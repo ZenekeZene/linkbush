@@ -3,36 +3,33 @@
   display: flex;
   align-items: center;
   padding: 18px 20px;
-  border-radius: 8px;
   background-color: black;
   overflow-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
   white-space: normal;
   color: white;
-  border: 1px solid black;
-  transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
   padding-left: 66px;
   padding-right: 66px;
+  border-radius: 8px;
+  border: 1px solid black;
 
   &__thumbnail {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translate(4px, -50%);
-    width: 46px;
-    height: 46px;
+    @include equal-size(46px);
     border-radius: 4px;
   }
 
   &__title {
     flex: 1 1 auto;
+    margin: 0px;
+    padding: 0px;
     text-align: center;
     font-size: 1.2rem;
     color: inherit;
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -41,10 +38,6 @@
   &:hover {
     color: black;
     background-color: white;
-
-    .link__share {
-      // display: flex;
-    }
   }
 
   &__share {
@@ -54,8 +47,7 @@
     right: 8px;
     transform: translateY(-50%);
     z-index: 10;
-    height: 40px;
-    width: 40px;
+    @include equal-size(40px);
     flex-direction: row;
     justify-content: center;
     align-items: center;
