@@ -11,7 +11,7 @@
   z-index: 1;
   width: 100%;
 
-  @media screen and (min-width: 640px) {
+  @include is-not-mobile {
     display: none;
   }
 }

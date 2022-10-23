@@ -2,3 +2,15 @@
   width: $size;
   height: $size;
 }
+
+@mixin is-mobile () {
+  @media screen and (max-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin is-not-mobile () {
+  @media screen and (min-width: $mobile-breakpoint) {
+    @content;
+  }
+}

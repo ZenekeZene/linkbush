@@ -17,6 +17,10 @@ $partSize: 5em;
   filter: blur(0.02em);
   -webkit-filter: blur(0.02em);
   font-size: 24px;
+
+  @include is-not-mobile {
+    display: none;
+  }
 }
 
 .particle {
@@ -34,7 +38,7 @@ $partSize: 5em;
   @for $p from 1 through $parts {
     &:nth-of-type(#{$p}) {
       animation-delay: $dur * random();
-      left: calc((100% - #{$partSize}) * #{($p - 1)/$parts});
+      left: calc((100% - #{$partSize}) * #{($p - 1) / $parts});
     }
   }
 }
