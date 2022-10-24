@@ -1,5 +1,6 @@
 import launchScrollDetection from './scroll'
 import launchGesture from './gesture'
+import initModal from './modal'
 
 let isScrolled = false
 let element
@@ -15,3 +16,4 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 launchGesture()
+initModal()
