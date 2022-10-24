@@ -1,7 +1,7 @@
 import TinyGesture from "https://unpkg.com/tinygesture@1.1.4/TinyGesture.js"
 // Documentation: https://www.npmjs.com/package/tinygesture
 
-function initSlider(target) {
+function initSlider (target) {
   let swiped = false
   let startOffset = 0
   const decelerationOnOverflow = 4
@@ -52,17 +52,6 @@ function initSlider(target) {
         startOffset = swiped
         target.style.transform = "translateX(" + swiped + "px)"
       }
-    })
-  })
-
-  // reset on tap
-  gesture.on("doubletap", (event) => {
-    // we could also use 'doubletap' here
-    window.requestAnimationFrame(() => {
-      target.style.transition = "transform .2s ease-in"
-      swiped = false
-      startOffset = 0
-      target.style.transform = null
     })
   })
 }
