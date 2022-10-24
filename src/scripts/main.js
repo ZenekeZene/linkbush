@@ -1,4 +1,5 @@
 import launchScrollDetection from './scroll'
+import launchGesture from './gesture'
 
 let isScrolled = false
 let element
@@ -6,10 +7,11 @@ let element
 launchScrollDetection({ callback: (value) => {
   if (!element) return
   isScrolled = value
-  console.log('callback', isScrolled)
   isScrolled ? element.classList.add('visible') : element.classList.remove('visible')
 }})
 
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
   element = document.getElementById('avatar-compressed')
 })
+
+launchGesture()

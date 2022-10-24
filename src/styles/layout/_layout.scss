@@ -28,7 +28,13 @@
   list-style: none;
 
   &__item {
-    margin-bottom: 1rem
+    position: relative;
+    margin-bottom: 1rem;
+
+    a {
+      position: relative;
+      z-index: 1;
+    }
   }
 }
 

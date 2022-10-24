@@ -1,5 +1,4 @@
 .link {
-  position: relative;
   display: flex;
   align-items: center;
   padding: 18px 20px;
@@ -47,13 +46,13 @@
   }
 
   &__share {
-    display: none;
     position: absolute;
     top: 50%;
-    right: 8px;
+    right: 0;
     transform: translateY(-50%);
-    z-index: 10;
+    z-index: 0;
     @include equal-size(40px);
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -63,6 +62,10 @@
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &.--left {
+      left: 0;
     }
   }
 }
