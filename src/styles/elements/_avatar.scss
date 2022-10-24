@@ -48,13 +48,17 @@
   }
 
   &.--compressed {
-    opacity: 0;
     position: fixed;
     top: 0;
-    left: 0;
+    @include center-horizontally;
     z-index: 2;
     display: block;
     width: 100%;
+    max-width: 788px;
+  }
+
+  &__inner {
+    opacity: 0;;
     transition: opacity 150ms ease;
   }
 
@@ -71,7 +75,31 @@
     color: black;
   }
 
-  &.visible {
+  &.visible .avatar__inner {
     opacity: 1;
+  }
+
+  &__share {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.6rem;
+    z-index: 5;
+    @include center-flex;
+    @include equal-size(3rem);
+    cursor: pointer;
+    border-radius: 50%;
+    color: black;
+    background: rgb(240, 240, 240);
+    border: 1px solid rgb(226, 226, 226);
+
+    @include is-not-mobile {
+      position: absolute;
+    }
+
+    @at-root .avatar.--compressed.visible & {
+      color: rgb(240, 240, 240);
+      background: black;
+      border: 1px solid rgb(10, 10, 10);
+    }
   }
 }
