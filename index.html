@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GORILA ya a la venta</title>
-    <link rel="stylesheet" href="./styles/style.scss">
+    <link rel="stylesheet" href="./src/styles/style.scss">
   </head>
   <body>
     <div class="wrapper">
@@ -15,6 +15,12 @@
           <img src="public/mic.jpg" class="avatar__image"/>
           <h1 class="avatar__name">LINDANO</h1>
           <h2 class="avatar__description">Nuevo álbum GORILA ya a la venta.</h2>
+          <section id="avatar-compressed" class="avatar --compressed">
+            <div class="avatar__inner">
+              <img src="public/mic.jpg" class="avatar__image"/>
+              <h1 class="avatar__name">LINDANO</h1>
+            </div>
+          </section>
         </header>
 
         <ul class="social">
@@ -123,5 +129,7 @@
       <div class="particle"></div>
       <div class="particle"></div>
     </section>
+
+    <script type="module" src="./src/scripts/main.js"></script>
   </body>
 </html>
