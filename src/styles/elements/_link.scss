@@ -40,37 +40,16 @@
     }
   }
 
-  &:hover {
-    color: black;
-    background-color: white;
-  }
-
-  &__share {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 0;
-    @include equal-size(45px);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    color: currentcolor;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-
-    svg {
-      margin-top: -3px;
-    }
-
+  @include is-not-touchable {
     &:hover {
-      background-color: rgba(0, 0, 0, 0.2);
-    }
+      color: black;
+      background-color: white;
 
-    &.--left {
-      left: 0;
+      .lindane-text {
+        color: black;
+        text-decoration: underline;
+        text-decoration-color: #1fff1f;
+      }
     }
   }
 }

@@ -14,3 +14,9 @@
     @content;
   }
 }
+
+@mixin is-not-touchable () {
+  @media(hover: hover) and (pointer: fine) {
+    @content;
+  }
+}

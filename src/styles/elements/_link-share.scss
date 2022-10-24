@@ -1,0 +1,41 @@
+.link-share {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 0;
+  @include equal-size(45px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  @include is-not-mobile {
+    z-index: 1;
+    right: 0.5rem;
+    color: white;
+    background: rgb(93, 93, 93, 0.5);
+
+    &:hover {
+      color: black;
+      background-color: white;
+    }
+  }
+
+  svg {
+    margin-top: -3px;
+  }
+
+  &.--left {
+    left: 0;
+  }
+}
