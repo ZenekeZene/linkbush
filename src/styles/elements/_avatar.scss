@@ -14,9 +14,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 1.5;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    @include overflow-ellipsis;
   }
 
   &__description {
@@ -43,8 +41,7 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    @include backdrop-filter(10px);
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid rgb(235, 238, 241);
     border-radius: 72px;
