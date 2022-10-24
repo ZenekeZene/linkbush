@@ -28,6 +28,10 @@
   background-position: 0px 24rem;
   background-repeat: no-repeat;
   animation: shine 7s ease-in-out infinite;
+
+  @include is-not-mobile {
+    display: none;
+  }
 }
 
 @keyframes shine {
