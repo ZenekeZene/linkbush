@@ -1,0 +1,26 @@
+.modal-link {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(244, 244, 244);
+  }
+
+  &__icon {
+    width: 2rem;
+  }
+
+  &__title {
+    text-align: left;
+    flex: 1 1 auto;
+    padding: 1rem;
+  }
+
+  &__share {
+    display: flex;
+    width: 100%;
+  }
+}
