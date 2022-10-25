@@ -22,5 +22,11 @@
   &__share {
     display: flex;
     width: 100%;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+
+    &:hover {
+      color: currentColor;
+    }
   }
 }
