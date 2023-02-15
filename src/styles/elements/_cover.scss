@@ -3,14 +3,11 @@
   top: 0;
   left: 0;
   @include equal-size;
-  background: url(/portada.webp) no-repeat;
-  background-size: cover;
-  background-position: center center;
 
   &:after {
     content: '';
     @include equal-size;
     display: block;
-    background: linear-gradient(0deg, rgb(0 0 0), rgb(59 87 56 / 67%));
+    background: linear-gradient(0deg, var(--cover-bgcolor__start), var(--cover-bgcolor__end));
   }
 }

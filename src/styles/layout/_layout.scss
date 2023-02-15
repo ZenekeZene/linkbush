@@ -3,10 +3,6 @@
 .wrapper {
   width: 100%;
   padding-bottom: 10rem;
-
-  @include is-mobile {
-    padding-bottom: 23rem;
-  }
 }
 
 .main {

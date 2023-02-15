@@ -2,16 +2,16 @@
   display: flex;
   align-items: center;
   padding: 18px 20px;
-  background-color: black;
+  padding-left: 66px;
+  padding-right: 66px;
   overflow-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
   white-space: normal;
-  color: white;
-  padding-left: 66px;
-  padding-right: 66px;
+  background-color:var(--link-bgcolor);
+  color: var(--link-textcolor);
   border-radius: 8px;
-  border: 1px solid black;
+  border: 1px solid var(--link-bordercolor);
 
   @at-root .social & {
     position: relative;

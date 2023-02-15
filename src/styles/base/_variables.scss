@@ -1,2 +1,13 @@
 $mobile-breakpoint: 640px;
 
+:root {
+  // Link
+  --link-bgcolor: black;
+  --link-textcolor: white;
+  --link-bordercolor: black;
+
+  // Cover
+  --cover-bgcolor__start: rgb(0 0 0);
+  --cover-bgcolor__end: rgb(100 100 100 / 67%);
+}
+
