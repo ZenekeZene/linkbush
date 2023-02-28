@@ -1,13 +1,18 @@
 $mobile-breakpoint: 640px;
 
 :root {
+  --font-family: Inter;
+  --font-family-fallback: Avenir, Helvetica, Arial, sans-serif;
+  --font-size: 16px;
+  --text-color: black;
+
   // Link
   --link-bgcolor: black;
   --link-textcolor: white;
   --link-bordercolor: black;
 
   // Cover
-  --cover-bgcolor__start: rgb(0 0 0);
-  --cover-bgcolor__end: rgb(100 100 100 / 67%);
+  --cover-bgcolor__start: #ffdd28;
+  --cover-bgcolor__end: #ffdd28;
 }
 

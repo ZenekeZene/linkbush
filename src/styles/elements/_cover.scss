@@ -1,7 +1,5 @@
 .cover {
-  position: fixed;
-  top: 0;
-  left: 0;
+  @include fixed-position;
   @include equal-size;
 
   &:after {

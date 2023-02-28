@@ -21,29 +21,6 @@
   }
 }
 
-@mixin center-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin center-full {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@mixin center-vertically {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-@mixin center-horizontally {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 @mixin backdrop-filter ($value) {
   backdrop-filter: blur($value);
   -webkit-backdrop-filter: blur($value);
@@ -53,4 +30,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+@mixin overflow-break {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }

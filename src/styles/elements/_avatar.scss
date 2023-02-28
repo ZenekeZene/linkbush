@@ -10,7 +10,6 @@
   &__name {
     max-width: 100%;
     margin: 0;
-    color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 20px;
     line-height: 1.5;
@@ -20,7 +19,6 @@
   &__description {
     margin: 0;
     padding: 0;
-    color: rgb(255, 255, 255);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
@@ -58,14 +56,12 @@
   }
 
   &__inner {
-    opacity: 0;;
+    opacity: 0;
     transition: opacity 150ms ease;
   }
 
   &.--compressed &__image {
-    position: absolute;
-    left: 0;
-    top: 0;
+    @include absolute-position;
     @include equal-size(3rem);
     margin: 0.45rem;
   }
@@ -87,10 +83,10 @@
     @include center-flex;
     @include equal-size(3rem);
     cursor: pointer;
-    border-radius: 50%;
     color: black;
-    background: rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
     border: 1px solid rgb(226, 226, 226);
+    border-radius: 50%;
 
     @include is-not-mobile {
       position: absolute;
@@ -98,7 +94,7 @@
 
     @at-root .avatar.--compressed.visible & {
       color: rgb(240, 240, 240);
-      background: black;
+      background-color: black;
       border: 1px solid rgb(10, 10, 10);
     }
   }

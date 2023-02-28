@@ -1,15 +1,15 @@
 .link {
+  $gutter: 4rem;
   display: flex;
   align-items: center;
-  padding: 18px 20px;
-  padding-left: 66px;
-  padding-right: 66px;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  padding: 1.1rem 1.2rem;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  @include overflow-break;
   hyphens: auto;
   white-space: normal;
-  background-color:var(--link-bgcolor);
   color: var(--link-textcolor);
+  background-color:var(--link-bgcolor);
   border-radius: 8px;
   border: 1px solid var(--link-bordercolor);
 
@@ -19,24 +19,29 @@
   }
 
   &__thumbnail {
-    position: absolute;
-    top: 50%;
-    left: 0;
+    @include absolute-position($top: 50%);
     transform: translate(4px, -50%);
-    @include equal-size(46px);
+    @include equal-size(2.9rem);
+    overflow: hidden;
     border-radius: 4px;
+
+    &-image {
+      position: relative;
+      top: 0;
+      left: 0;
+      @include equal-size;
+    }
   }
 
   &__title {
     flex: 1 1 auto;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     text-align: center;
     font-size: 1.2rem;
     color: inherit;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: var(--font-size);
   }
 
   &__subtitle {
@@ -49,12 +54,6 @@
     &:hover {
       color: black;
       background-color: white;
-
-      .lindane-text {
-        color: black;
-        text-decoration: underline;
-        text-decoration-color: #1fff1f;
-      }
     }
   }
 }
