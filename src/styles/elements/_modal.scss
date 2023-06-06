@@ -12,6 +12,10 @@
     display: block;
   }
 
+  @at-root body.modal-open {
+    overflow: hidden;
+  }
+
   &__backdrop {
     position: absolute;
     bottom: 0;
