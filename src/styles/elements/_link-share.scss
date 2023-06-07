@@ -1,5 +1,6 @@
 .link-share {
   position: absolute;
+  display: none;
   right: 0.2rem;
   z-index: -1;
   @include center-vertically;

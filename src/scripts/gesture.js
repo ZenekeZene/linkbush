@@ -58,7 +58,7 @@ function initSlider (target) {
 
 function launchGesture () {
   document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".swipe-item").forEach(initSlider)
+    // document.querySelectorAll(".swipe-item").forEach(initSlider)
   })
 }
 
